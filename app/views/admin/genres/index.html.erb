@@ -24,7 +24,7 @@
 
 
 <h2>ジャンル追加</h2>
-<% form with model: @genre, url: , local: true do |f| %>
+<% form_with model: @genre, local: true do |f| %>
   <%= render "layouts/error_messages",resource: @genre %>
   <div class="field">
     <i>ジャンル</i>

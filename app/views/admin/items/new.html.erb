@@ -1,0 +1,16 @@
+<h2>商品登録</h2>
+<%= form_with model: @item, url: admin_items_path do |f| %>
+  <%= render "layouts/error_messages", resource: @item %>
+  <div>
+    <div class="img_field">
+    </div>
+    <%= f.attachment_field :image_id %>
+  </div>
+  
+  <div>
+    <%= render "from_item" %>
+    <div>
+      <%= f.submit "新規登録" %>
+    </div>
+  </div>
+<% end %>  

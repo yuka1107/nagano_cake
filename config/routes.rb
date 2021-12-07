@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   nemespace :admin do
     resources :genres,only: [:create, :index, :edit, :update]
+    resources :items,only: [:new, :create, :index, :show, :edit, :update]
   end
 
 

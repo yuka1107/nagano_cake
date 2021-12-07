@@ -1,0 +1,35 @@
+<h2>ジャンル一覧</h2>
+<div>
+  <table class>
+    <thead>
+      <tr>
+        <th>ジャンル</th>
+      </tr>
+    </thead>
+    <tboy>
+      <% @genres.each do |genre| %>
+      <tr>
+        <td>
+          <%= genre.name %>
+        </td>
+        <td>
+          <%= link_to "編集", edit_admin_genre_path(genre) %>
+        </td>
+      </tr>
+      <% end %>
+    </tboy>
+  </table>
+</div>
+
+
+
+<h2>ジャンル追加</h2>
+<% form with model: @genre, url: , local: true do |f| %>
+  <%= render "layouts/error_messages",resource: @genre %>
+  <div class="field">
+    <i>ジャンル</i>
+    <%= f.label :name %>
+
+    <%= f.submit "保存" %>
+  </div>
+<% end %>
